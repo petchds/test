@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dir="http://accscms.tti.com/schemas/DirectExportDefinition" xmlns:bas="http://accscms.tti.com/schemas/BaseDefinition" xmlns:dir1="http://accscms.tti.com/schemas/DirectExport">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dir:SetDocument0309Request>
+         <bas:messageContext>
+            <bas:usernameToken>
+               <bas:username>?</bas:username>
+               <bas:passwordDigest>?</bas:passwordDigest>
+               <bas:nonce>?</bas:nonce>
+               <bas:created>?</bas:created>
+            </bas:usernameToken>
+            <!--Optional:-->
+            <bas:offset>?</bas:offset>
+            <!--Optional:-->
+            <bas:numOfResult>?</bas:numOfResult>
+         </bas:messageContext>
+         <dir:messageDetail>
+            <!--Optional:-->
+            <dir:document0309>
+               <dir1:transactionNo>?</dir1:transactionNo>
+               <dir1:declarationNo>?</dir1:declarationNo>
+               <dir1:documentType>?</dir1:documentType>
+               <dir1:vesselName>?</dir1:vesselName>
+               <!--Optional:-->
+               <dir1:masterAirWaybill>?</dir1:masterAirWaybill>
+               <!--Optional:-->
+               <dir1:houseAirWaybill>?</dir1:houseAirWaybill>
+               <!--Optional:-->
+               <dir1:flightNo>?</dir1:flightNo>
+               <!--Optional:-->
+               <dir1:flightDate>?</dir1:flightDate>
+               <dir1:portOfDischarge>?</dir1:portOfDischarge>
+               <!--Optional:-->
+               <dir1:shedNumber>?</dir1:shedNumber>
+               <dir1:numberOfPackage>?</dir1:numberOfPackage>
+               <dir1:numberOfPackageUnit>?</dir1:numberOfPackageUnit>
+               <dir1:grossWeight>?</dir1:grossWeight>
+               <dir1:grossWeightUnit>?</dir1:grossWeightUnit>
+               <dir1:status0309DateTime>?</dir1:status0309DateTime>
+            </dir:document0309>
+         </dir:messageDetail>
+      </dir:SetDocument0309Request>
+   </soapenv:Body>
+</soapenv:Envelope>

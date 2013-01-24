@@ -1,0 +1,309 @@
+		field[0][0] = "ReferenceNo";
+		field[1][0] = "RecvControlNo";
+		field[2][0] = "ProcessIndicator";
+		field[3][0] = "MessageFunction";
+		field[4][0] = "OriginCountryCode";
+		field[5][0] = "UserId";
+		field[6][0] = "ForwarderAssignedID";
+		field[7][0] = "TaxReference";
+		field[8][0] = "MasterBLNo";
+		field[9][0] = "LoadingLocationID";
+		field[10][0] = "DischargeLocationID";
+		field[11][0] = "DeliveryLocationID";
+		field[12][0] = "ShedNo";
+		field[13][0] = "HouseBLNo";
+		field[14][0] = "ItemDescription";
+		field[15][0] = "DangerousGoods";
+		field[16][0] = "ShippingMark";
+		field[17][0] = "NumberOfPackages";
+		field[18][0] = "UnitOfPackages";
+		field[19][0] = "Measure";
+		field[20][0] = "MeasureUnitCode";
+		field[21][0] = "FOBValue";
+		field[22][0] = "FOBCurrencyCode";
+		field[23][0] = "FreightValue";
+		field[24][0] = "FreightCurrencyCode";
+		field[25][0] = "InsuranceValue";
+		field[26][0] = "InsuranceCurrencyCode";
+		field[27][0] = "Name";
+		field[28][0] = "Street";
+		field[29][0] = "District";
+		field[30][0] = "SubProvince";
+		field[31][0] = "Province";
+		field[32][0] = "PostCode";
+		field[33][0] = "CountryCode";
+		field[34][0] = "PhoneNo";
+		field[35][0] = "Name";
+		field[36][0] = "Street";
+		field[37][0] = "District";
+		field[38][0] = "SubProvince";
+		field[39][0] = "Province";
+		field[40][0] = "PostCode";
+		field[41][0] = "CountryCode";
+		field[42][0] = "PhoneNo";
+		field[43][0] = "Name";
+		field[44][0] = "Street";
+		field[45][0] = "District";
+		field[46][0] = "SubProvince";
+		field[47][0] = "Province";
+		field[48][0] = "PostCode";
+		field[49][0] = "CountryCode";
+		field[50][0] = "PhoneNo";
+		field[51][0] = "LastEntry";
+
+
+"`referenceno` varchar(45) NOT NULL ," +
+"`recvcontrolno` varchar(45) NOT NULL ," +
+"`processindicator` varchar(45) NOT NULL ," +
+"`messagefunction` varchar(45) NOT NULL ," +
+"`origincountrycode` varchar(45) NOT NULL ," +
+"`userid` varchar(45) NOT NULL ," +
+"`forwarderassignedid` varchar(45) NOT NULL ," +
+"`taxreference` varchar(45) NOT NULL ," +
+"`masterblno` varchar(45) NOT NULL ," +
+"`loadinglocationid` varchar(45) NOT NULL ," +
+"`dischargelocationid` varchar(45) NOT NULL ," +
+"`deliverylocationid` varchar(45) NOT NULL ," +
+"`shedno` varchar(45) NOT NULL ," +
+"`houseblno` varchar(45) NOT NULL ," +
+"`itemdescription` varchar(45) NOT NULL ," +
+"`dangerousgoods` varchar(45) NOT NULL ," +
+"`shippingmark` varchar(45) NOT NULL ," +
+"`numberofpackages` varchar(45) NOT NULL ," +
+"`unitofpackages` varchar(45) NOT NULL ," +
+"`measure` varchar(45) NOT NULL ," +
+"`measureunitcode` varchar(45) NOT NULL ," +
+"`fobvalue` varchar(45) NOT NULL ," +
+"`fobcurrencycode` varchar(45) NOT NULL ," +
+"`freightvalue` varchar(45) NOT NULL ," +
+"`freightcurrencycode` varchar(45) NOT NULL ," +
+"`insurancevalue` varchar(45) NOT NULL ," +
+"`insurancecurrencycode` varchar(45) NOT NULL ," +
+"`name` varchar(45) NOT NULL ," +
+"`street` varchar(45) NOT NULL ," +
+"`district` varchar(45) NOT NULL ," +
+"`subprovince` varchar(45) NOT NULL ," +
+"`province` varchar(45) NOT NULL ," +
+"`postcode` varchar(45) NOT NULL ," +
+"`countrycode` varchar(45) NOT NULL ," +
+"`phoneno` varchar(45) NOT NULL ," +
+"`name` varchar(45) NOT NULL ," +
+"`street` varchar(45) NOT NULL ," +
+"`district` varchar(45) NOT NULL ," +
+"`subprovince` varchar(45) NOT NULL ," +
+"`province` varchar(45) NOT NULL ," +
+"`postcode` varchar(45) NOT NULL ," +
+"`countrycode` varchar(45) NOT NULL ," +
+"`phoneno` varchar(45) NOT NULL ," +
+"`name` varchar(45) NOT NULL ," +
+"`street` varchar(45) NOT NULL ," +
+"`district` varchar(45) NOT NULL ," +
+"`subprovince` varchar(45) NOT NULL ," +
+"`province` varchar(45) NOT NULL ," +
+"`postcode` varchar(45) NOT NULL ," +
+"`countrycode` varchar(45) NOT NULL ," +
+"`phoneno` varchar(45) NOT NULL ," +
+"`lastentry` varchar(45) NOT NULL ," +
+
+
+		String sqlCommand1 = "SELECT "+
+			" id ," + 
+			" id2 ," + 
+			" reference_number ," + 
+			" received_control_number ," + 
+			" mawb ," + 
+			" freight_forwarder_tax_number ," + 
+			" freight_forwarder_branch ," + 
+			" processing_indicator ," + 
+			" origin_country_code ," + 
+			" port_of_loading ," + 
+			" port_of_discharge ," + 
+			" place_of_receipt ," + 
+			" place_of_delivery ," + 
+			" shed_no ," + 
+			" message_function ," + 
+			" freight_charges ," + 
+			" other_charges ," + 
+			" freight_amount_foreign ," + 
+			" freight_currency_code ," + 
+			" term_of_payment_freight ," + 
+			" registration_id ," + 
+			" modified_date_time ," + 
+			" type ," + 
+			"FROM abil_control WHERE ..."
+
+		String sqlCommand2 = "SELECT "+
+			" id ," + 
+			" id2 ," + 
+			" abil_control_id ," + 
+			" hawb ," + 
+			" received_control_number ," + 
+			" mawb ," + 
+			" flight_no ," + 
+			" flight_date ," + 
+			" e_freight_code ," + 
+			" consignor_name ," + 
+			" consignor_street_and_number ," + 
+			" consignor_district ," + 
+			" consignor_sub_province ," + 
+			" consignor_province ," + 
+			" consignor_postcode ," + 
+			" consignor_phone_number ," + 
+			" consignor_country_code ," + 
+			" consignee_or_notify_party ," + 
+			" consignee_name ," + 
+			" consignee_street_and_number ," + 
+			" consignee_district ," + 
+			" consignee_sub_province ," + 
+			" consignee_province ," + 
+			" consignee_postcode ," + 
+			" consignee_phone_number ," + 
+			" consignee_country_code ," + 
+			" notify_party_name ," + 
+			" notify_party_street_and_number ," + 
+			" notify_party_district ," + 
+			" notify_party_sub_province ," + 
+			" notify_party_province ," + 
+			" notify_party_postcode ," + 
+			" notify_party_phone_number ," + 
+			" notify_party_country_code ," + 
+			" transshipment_applicant_tax_number ," + 
+			" transshipment_applicant_branch ," + 
+			" transshipment_applicant_english_name ," + 
+			" transshipment_applicant_street_and_number ," + 
+			" transshipment_applicant_district ," + 
+			" transshipment_applicant_sub_province ," + 
+			" transshipment_applicant_province ," + 
+			" transshipment_applicant_postcode ," + 
+			" transshipment_applicant_phone_number ," + 
+			" transshipment_applicant_country_code ," + 
+			" total_gross_weight ," + 
+			" total_gross_weight_unit ," + 
+			" total_number_of_package ," + 
+			" total_number_of_package_unit ," + 
+			" fob_value_foreign ," + 
+			" fob_currency_code ," + 
+			" freight_amount_foreign ," + 
+			" freight_currency_code ," + 
+			" insurance_amount_foreign ," + 
+			" insurance_currency_code ," + 
+			" mark_and_labels ," + 
+			" goods_description ," + 
+			" declaration_no ," + 
+			" last_entry ," + 
+			" balanced ," + 
+			" balanced_date_time ," + 
+			" modified_date_time ," + 
+			" shed_no ," + 
+			" type ," + 
+			" close_flight ," + 
+			"FROM abil_detail WHERE ..."
+
+
+
+		case "ReferenceNo" :	value = value;
+		break;
+		case "RecvControlNo" :	value = value;
+		break;
+		case "ProcessIndicator" :	value = value;
+		break;
+		case "MessageFunction" :	value = value;
+		break;
+		case "OriginCountryCode" :	value = value;
+		break;
+		case "UserId" :	value = value;
+		break;
+		case "ForwarderAssignedID" :	value = value;
+		break;
+		case "TaxReference" :	value = value;
+		break;
+		case "MasterBLNo" :	value = value;
+		break;
+		case "LoadingLocationID" :	value = value;
+		break;
+		case "DischargeLocationID" :	value = value;
+		break;
+		case "DeliveryLocationID" :	value = value;
+		break;
+		case "ShedNo" :	value = value;
+		break;
+		case "HouseBLNo" :	value = value;
+		break;
+		case "ItemDescription" :	value = value;
+		break;
+		case "DangerousGoods" :	value = value;
+		break;
+		case "ShippingMark" :	value = value;
+		break;
+		case "NumberOfPackages" :	value = value;
+		break;
+		case "UnitOfPackages" :	value = value;
+		break;
+		case "Measure" :	value = value;
+		break;
+		case "MeasureUnitCode" :	value = value;
+		break;
+		case "FOBValue" :	value = value;
+		break;
+		case "FOBCurrencyCode" :	value = value;
+		break;
+		case "FreightValue" :	value = value;
+		break;
+		case "FreightCurrencyCode" :	value = value;
+		break;
+		case "InsuranceValue" :	value = value;
+		break;
+		case "InsuranceCurrencyCode" :	value = value;
+		break;
+		case "Name" :	value = value;
+		break;
+		case "Street" :	value = value;
+		break;
+		case "District" :	value = value;
+		break;
+		case "SubProvince" :	value = value;
+		break;
+		case "Province" :	value = value;
+		break;
+		case "PostCode" :	value = value;
+		break;
+		case "CountryCode" :	value = value;
+		break;
+		case "PhoneNo" :	value = value;
+		break;
+		case "Name" :	value = value;
+		break;
+		case "Street" :	value = value;
+		break;
+		case "District" :	value = value;
+		break;
+		case "SubProvince" :	value = value;
+		break;
+		case "Province" :	value = value;
+		break;
+		case "PostCode" :	value = value;
+		break;
+		case "CountryCode" :	value = value;
+		break;
+		case "PhoneNo" :	value = value;
+		break;
+		case "Name" :	value = value;
+		break;
+		case "Street" :	value = value;
+		break;
+		case "District" :	value = value;
+		break;
+		case "SubProvince" :	value = value;
+		break;
+		case "Province" :	value = value;
+		break;
+		case "PostCode" :	value = value;
+		break;
+		case "CountryCode" :	value = value;
+		break;
+		case "PhoneNo" :	value = value;
+		break;
+		case "LastEntry" :	value = value;
+		break;
+
+

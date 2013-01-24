@@ -1,0 +1,146 @@
+		field[0][0] = "DocumentNumber";
+		field[1][0] = "Receivedcontrolnumber";
+		field[2][0] = "DocumentType";
+		field[3][0] = "UserId";
+		field[4][0] = "CarrierID";
+		field[5][0] = "TransportMeansCode";
+		field[6][0] = "TransportMeansJourneyID";
+		field[7][0] = "TransportMeansIdentificationText";
+		field[8][0] = "Nationality";
+		field[9][0] = "TransportModeCode";
+		field[10][0] = "MasterName";
+		field[11][0] = "PreviousFlightNo";
+		field[12][0] = "PreviousDate";
+		field[13][0] = "DischargeLocationID";
+		field[14][0] = "BerthDate";
+		field[15][0] = "TransportEquipmentID";
+		field[16][0] = "ExpectedDateAndTime";
+		field[17][0] = "LastCallLocationID";
+		field[18][0] = "Measure";
+		field[19][0] = "MeasureUnitCode";
+		field[20][0] = "MessageFunction";
+		field[21][0] = "LastEntry";
+
+
+"`documentnumber` varchar(45) NOT NULL ," +
+"`receivedcontrolnumber` varchar(45) NOT NULL ," +
+"`documenttype` varchar(45) NOT NULL ," +
+"`userid` varchar(45) NOT NULL ," +
+"`carrierid` varchar(45) NOT NULL ," +
+"`transportmeanscode` varchar(45) NOT NULL ," +
+"`transportmeansjourneyid` varchar(45) NOT NULL ," +
+"`transportmeansidentificationtext` varchar(45) NOT NULL ," +
+"`nationality` varchar(45) NOT NULL ," +
+"`transportmodecode` varchar(45) NOT NULL ," +
+"`mastername` varchar(45) NOT NULL ," +
+"`previousflightno` varchar(45) NOT NULL ," +
+"`previousdate` varchar(45) NOT NULL ," +
+"`dischargelocationid` varchar(45) NOT NULL ," +
+"`berthdate` varchar(45) NOT NULL ," +
+"`transportequipmentid` varchar(45) NOT NULL ," +
+"`expecteddateandtime` varchar(45) NOT NULL ," +
+"`lastcalllocationid` varchar(45) NOT NULL ," +
+"`measure` varchar(45) NOT NULL ," +
+"`measureunitcode` varchar(45) NOT NULL ," +
+"`messagefunction` varchar(45) NOT NULL ," +
+"`lastentry` varchar(45) NOT NULL ," +
+
+
+		String sqlCommand1 = "SELECT "+
+			" id ," + 
+			" id2 ," + 
+			" reference_number ," + 
+			" received_control_number ," + 
+			" mode_of_transport ," + 
+			" processing_indicator ," + 
+			" type_of_transport ," + 
+			" ship_agent_tax_number ," + 
+			" ship_agent_branch ," + 
+			" callsign ," + 
+			" vessel_name ," + 
+			" master_name ," + 
+			" previous_flight_no ," + 
+			" previous_date ," + 
+			" nationality ," + 
+			" net_register_tonnage ," + 
+			" gross_register_tonnage ," + 
+			" dead_weight_tonnage ," + 
+			" registration_id ," + 
+			" modified_date_time ," + 
+			" type ," + 
+			"FROM vsed_control WHERE ..."
+
+		String sqlCommand2 = "SELECT "+
+			" id ," + 
+			" id2 ," + 
+			" vsed_control_id ," + 
+			" received_control_number ," + 
+			" port_of_discharge ," + 
+			" flight_no ," + 
+			" flight_date ," + 
+			" flight_time ," + 
+			" estimate_to_berth_date ," + 
+			" estimate_to_berth_time ," + 
+			" berth ," + 
+			" last_port_of_call ," + 
+			" number_of_mawb ," + 
+			" number_of_hawb ," + 
+			" number_of_container ," + 
+			" total_gross_weight ," + 
+			" total_gross_weight_unit ," + 
+			" message_function ," + 
+			" last_entry ," + 
+			" modified_date_time ," + 
+			" terminal_operator ," + 
+			" type ," + 
+			" close_flight ," + 
+			"FROM vsed_detail WHERE ..."
+
+
+
+		case "DocumentNumber" :	value = value;
+		break;
+		case "Receivedcontrolnumber" :	value = value;
+		break;
+		case "DocumentType" :	value = value;
+		break;
+		case "UserId" :	value = value;
+		break;
+		case "CarrierID" :	value = value;
+		break;
+		case "TransportMeansCode" :	value = value;
+		break;
+		case "TransportMeansJourneyID" :	value = value;
+		break;
+		case "TransportMeansIdentificationText" :	value = value;
+		break;
+		case "Nationality" :	value = value;
+		break;
+		case "TransportModeCode" :	value = value;
+		break;
+		case "MasterName" :	value = value;
+		break;
+		case "PreviousFlightNo" :	value = value;
+		break;
+		case "PreviousDate" :	value = value;
+		break;
+		case "DischargeLocationID" :	value = value;
+		break;
+		case "BerthDate" :	value = value;
+		break;
+		case "TransportEquipmentID" :	value = value;
+		break;
+		case "ExpectedDateAndTime" :	value = value;
+		break;
+		case "LastCallLocationID" :	value = value;
+		break;
+		case "Measure" :	value = value;
+		break;
+		case "MeasureUnitCode" :	value = value;
+		break;
+		case "MessageFunction" :	value = value;
+		break;
+		case "LastEntry" :	value = value;
+		break;
+
+

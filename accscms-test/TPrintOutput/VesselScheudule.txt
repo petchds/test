@@ -1,0 +1,170 @@
+		field[0][0] = "bas:username";
+		field[1][0] = "bas:passwordDigest";
+		field[2][0] = "bas:nonce";
+		field[3][0] = "bas:created";
+		field[4][0] = "bas:offset";
+		field[5][0] = "bas:numOfResult";
+		field[6][0] = "man1:referenceNumber";
+		field[7][0] = "man1:receivedControlNumber";
+		field[8][0] = "man1:modeOfTransport";
+		field[9][0] = "man1:processingIndicator";
+		field[10][0] = "man1:typeOfTransport";
+		field[11][0] = "man1:shipAgentTaxNumber";
+		field[12][0] = "man1:shipAgentBranch";
+		field[13][0] = "man1:callsign";
+		field[14][0] = "man1:vesselName";
+		field[15][0] = "man1:masterName";
+		field[16][0] = "man1:previousFlightNo";
+		field[17][0] = "man1:previousDate";
+		field[18][0] = "man1:nationality";
+		field[19][0] = "man1:netRegisterTonnage";
+		field[20][0] = "man1:grossRegisterTonnage";
+		field[21][0] = "man1:deadWeightTonnage";
+		field[22][0] = "man1:registrationID";
+		field[23][0] = "man1:receivedControlNumber";
+		field[24][0] = "man1:portOfDischarge";
+		field[25][0] = "man1:flightNo";
+		field[26][0] = "man1:flightDate";
+		field[27][0] = "man1:flightTime";
+		field[28][0] = "man1:estimateToBerthDate";
+		field[29][0] = "man1:estimateToBerthTime";
+		field[30][0] = "man1:berth";
+		field[31][0] = "man1:lastPortOfCall";
+		field[32][0] = "man1:numberOfMasterAirWaybill";
+		field[33][0] = "man1:numberOfHouseAirWaybill";
+		field[34][0] = "man1:numberOfContainer";
+		field[35][0] = "man1:totalGrossWeight";
+		field[36][0] = "man1:totalGrossWeightUnitCode";
+		field[37][0] = "man1:messageFunction";
+		field[38][0] = "man1:lastEntry";
+
+
+		String sqlCommand1 = "SELECT "+
+			" id ," + 
+			" reference_number ," + 
+			" received_control_number ," + 
+			" mode_of_transport ," + 
+			" processing_indicator ," + 
+			" type_of_transport ," + 
+			" ship_agent_tax_number ," + 
+			" ship_agent_branch ," + 
+			" callsign ," + 
+			" vessel_name ," + 
+			" master_name ," + 
+			" previous_flight_no ," + 
+			" previous_date ," + 
+			" nationality ," + 
+			" net_register_tonnage ," + 
+			" gross_register_tonnage ," + 
+			" dead_weight_tonnage ," + 
+			" registration_id ," + 
+			" modified_date_time ," + 
+			" type ," + 
+			"FROM vsed_control WHERE ..."
+
+		String sqlCommand2 = "SELECT "+
+			" id ," + 
+			" vsed_control_id ," + 
+			" received_control_number ," + 
+			" port_of_discharge ," + 
+			" flight_no ," + 
+			" flight_date ," + 
+			" flight_time ," + 
+			" estimate_to_berth_date ," + 
+			" estimate_to_berth_time ," + 
+			" berth ," + 
+			" last_port_of_call ," + 
+			" number_of_mawb ," + 
+			" number_of_hawb ," + 
+			" number_of_container ," + 
+			" total_gross_weight ," + 
+			" total_gross_weight_unit ," + 
+			" message_function ," + 
+			" last_entry ," + 
+			" modified_date_time ," + 
+			" terminal_operator ," + 
+			" type ," + 
+			"FROM vsed_detail WHERE ..."
+
+
+
+		case "username" :	value = value;
+		break;
+		case "passwordDigest" :	value = value;
+		break;
+		case "nonce" :	value = value;
+		break;
+		case "created" :	value = value;
+		break;
+		case "offset" :	value = value;
+		break;
+		case "numOfResult" :	value = value;
+		break;
+		case "referenceNumber" :	value = value;
+		break;
+		case "receivedControlNumber" :	value = value;
+		break;
+		case "modeOfTransport" :	value = value;
+		break;
+		case "processingIndicator" :	value = value;
+		break;
+		case "typeOfTransport" :	value = value;
+		break;
+		case "shipAgentTaxNumber" :	value = value;
+		break;
+		case "shipAgentBranch" :	value = value;
+		break;
+		case "callsign" :	value = value;
+		break;
+		case "vesselName" :	value = value;
+		break;
+		case "masterName" :	value = value;
+		break;
+		case "previousFlightNo" :	value = value;
+		break;
+		case "previousDate" :	value = value;
+		break;
+		case "nationality" :	value = value;
+		break;
+		case "netRegisterTonnage" :	value = value;
+		break;
+		case "grossRegisterTonnage" :	value = value;
+		break;
+		case "deadWeightTonnage" :	value = value;
+		break;
+		case "registrationID" :	value = value;
+		break;
+		case "receivedControlNumber" :	value = value;
+		break;
+		case "portOfDischarge" :	value = value;
+		break;
+		case "flightNo" :	value = value;
+		break;
+		case "flightDate" :	value = value;
+		break;
+		case "flightTime" :	value = value;
+		break;
+		case "estimateToBerthDate" :	value = value;
+		break;
+		case "estimateToBerthTime" :	value = value;
+		break;
+		case "berth" :	value = value;
+		break;
+		case "lastPortOfCall" :	value = value;
+		break;
+		case "numberOfMasterAirWaybill" :	value = value;
+		break;
+		case "numberOfHouseAirWaybill" :	value = value;
+		break;
+		case "numberOfContainer" :	value = value;
+		break;
+		case "totalGrossWeight" :	value = value;
+		break;
+		case "totalGrossWeightUnitCode" :	value = value;
+		break;
+		case "messageFunction" :	value = value;
+		break;
+		case "lastEntry" :	value = value;
+		break;
+
+

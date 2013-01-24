@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/accscmstest" userId="cmsadmin" password="cmsadmin" />
+    <javaModelGenerator targetPackage="com.tti.accscms.domain.clientmanagement" targetProject="accscms-test/src/main/java" />
+    <sqlMapGenerator targetPackage="com.tti.accscms.mapper.clientmanagement" targetProject="accscms-test/src/main/java" />
+    <javaClientGenerator targetPackage="com.tti.accscms.mapper.clientmanagement" targetProject="accscms-test/src/main/java" type="XMLMAPPER" />
+    
+	<table schema="accscmstest" tableName="user_company" domainObjectName="UserCompany"></table>
+	<table schema="accscmstest" tableName="shed_no" domainObjectName="ShedNo"></table>
+	<table schema="accscmstest" tableName="request_log" domainObjectName="RequestLog"></table>
+  </context>
+</generatorConfiguration>

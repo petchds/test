@@ -1,0 +1,101 @@
+	
+	@Override
+	public #INSERT_TYPE insert(#DOMAIN_CLASS #L_DOMAIN_CLASS) throws DaoException {
+		if (#L_DOMAIN_CLASS == null) {
+			throw new DaoException("Cannot insert #TABLE_NAME with null value.");
+		}
+		
+		try {
+			Connection conn = DataSourceUtils.doGetConnection(dataSource);
+            PreparedStatement ps = conn.prepareStatement("insert into #TABLE_NAME(#DOMAIN_ATTRS) values(#DOMAIN_VALUES)"#AUTO_INC);
+            #DOMAIN_CLASSDaoImpl.setPreparedStatementValues(ps, #L_DOMAIN_CLASS);#PS_AUTO_INC
+            ps.execute();
+#EXTRA_AUTO_INC
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+	}
+	
+	@Override
+	public #COUNT_TYPE count() throws DaoException {
+		try {
+			Connection conn = DataSourceUtils.doGetConnection(dataSource);
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("select count(*) from #TABLE_NAME");
+			
+			#COUNT_TYPE count = -1;
+			if (rs.next()) { 
+				count = rs.get#U_COUNT_TYPE(1);
+			}
+			rs.close();
+			stmt.close();
+			
+			logger.debug("DB:COUNT #TABLE_NAME => " + count);
+			
+			return count;
+		} catch (SQLException e) {
+			throw new DaoException(e);
+		}
+	}
+
+	@Override
+	public #DOMAIN_CLASS findBy#U_KEY_NAME(#KEY_TYPE #KEY_NAME) throws DaoException {
+		try {
+			Connection conn = DataSourceUtils.doGetConnection(dataSource);
+            PreparedStatement ps = conn.prepareStatement("select #DOMAIN_ATTRS from #TABLE_NAME where #KEY_NAME=?");
+            ps.set#U_KEY_TYPE(1, #KEY_NAME);
+            
+            logger.debug("DB:FIND #TABLE_NAME[#KEY_NAME=" + #KEY_NAME + "]");
+
+            ResultSet rs = ps.executeQuery();
+            #DOMAIN_CLASS instance = null;
+            if (rs.next()) {
+                instance = #DOMAIN_CLASSDaoImpl.createInstanceFromResultSet(rs);
+            }
+            rs.close();
+            ps.close();
+
+            return instance;
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+	}
+	
+	@Override
+	public int update(#DOMAIN_CLASS #L_DOMAIN_CLASS) throws DaoException {
+		if (#L_DOMAIN_CLASS == null) {
+			throw new DaoException("Cannot insert #TABLE_NAME with null value.");
+		}
+		
+		try {
+			Connection conn = DataSourceUtils.doGetConnection(dataSource);
+            PreparedStatement ps = conn.prepareStatement("update #TABLE_NAME set #DOMAIN_UPDATE where #KEY_NAME=?");
+            #DOMAIN_CLASSDaoImpl.setPreparedStatementValues(ps, #L_DOMAIN_CLASS);
+            ps.set#U_KEY_TYPE(#DOMAIN_COUNT, #L_DOMAIN_CLASS.get#U_KEY_NAME());
+            int count = ps.executeUpdate();
+            ps.close();
+            
+            logger.info("DB:UPDATE #TABLE_NAME[#KEY_NAME=" + #L_DOMAIN_CLASS.get#U_KEY_NAME() + "] => " + count);
+
+            return count;
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+	}
+	
+	@Override
+	public int deleteBy#U_KEY_NAME(#KEY_TYPE #KEY_NAME) throws DaoException {
+		 try {
+		 	Connection conn = DataSourceUtils.doGetConnection(dataSource);
+            PreparedStatement ps = conn.prepareStatement("delete from #TABLE_NAME where #KEY_NAME=?");
+            ps.set#U_KEY_TYPE(1, #KEY_NAME);
+            int count = ps.executeUpdate();
+            ps.close();
+            
+            logger.info("DB:DELETE #TABLE_NAME[#KEY_NAME=" + #KEY_NAME + "] => " + count);
+
+            return count;
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+	}

@@ -1,0 +1,107 @@
+		field[0][0] = "ReferenceNo";
+		field[1][0] = "RecvControlNo";
+		field[2][0] = "ProcessIndicator";
+		field[3][0] = "MessageFunction";
+		field[4][0] = "UserId";
+		field[5][0] = "LoadingLocationID";
+		field[6][0] = "DischargeLocationID";
+		field[7][0] = "DeliveryLocationID";
+		field[8][0] = "MasterBLNo";
+		field[9][0] = "HouseNo";
+		field[10][0] = "NumberOfPackages";
+		field[11][0] = "UnitOfPackages";
+		field[12][0] = "Measure";
+		field[13][0] = "MeasureUnitCode";
+		field[14][0] = "LastEntry";
+		field[15][0] = "TransportEquipmentID";
+
+
+"`referenceno` varchar(45) NOT NULL ," +
+"`recvcontrolno` varchar(45) NOT NULL ," +
+"`processindicator` varchar(45) NOT NULL ," +
+"`messagefunction` varchar(45) NOT NULL ," +
+"`userid` varchar(45) NOT NULL ," +
+"`loadinglocationid` varchar(45) NOT NULL ," +
+"`dischargelocationid` varchar(45) NOT NULL ," +
+"`deliverylocationid` varchar(45) NOT NULL ," +
+"`masterblno` varchar(45) NOT NULL ," +
+"`houseno` varchar(45) NOT NULL ," +
+"`numberofpackages` varchar(45) NOT NULL ," +
+"`unitofpackages` varchar(45) NOT NULL ," +
+"`measure` varchar(45) NOT NULL ," +
+"`measureunitcode` varchar(45) NOT NULL ," +
+"`lastentry` varchar(45) NOT NULL ," +
+"`transportequipmentid` varchar(45) NOT NULL ," +
+
+
+		String sqlCommand1 = "SELECT "+
+			" id ," + 
+			" id2 ," + 
+			" reference_number ," + 
+			" received_control_number ," + 
+			" port_of_loading ," + 
+			" port_of_discharge ," + 
+			" processing_indicator ," + 
+			" message_function ," + 
+			" registration_id ," + 
+			" modified_date_time ," + 
+			" type ," + 
+			" flight_no ," + 
+			" flight_date ," + 
+			"FROM aman_control WHERE ..."
+
+		String sqlCommand2 = "SELECT "+
+			" id ," + 
+			" id2 ," + 
+			" aman_control_id ," + 
+			" received_control_number ," + 
+			" mawb ," + 
+			" aircraft_agent_tax_number ," + 
+			" aircraft_agent_branch ," + 
+			" number_of_hawb ," + 
+			" total_gross_weight ," + 
+			" total_gross_weight_unit ," + 
+			" total_number_of_package ," + 
+			" total_number_of_package_unit ," + 
+			" last_entry ," + 
+			" modified_date_time ," + 
+			" terminal_operator ," + 
+			" type ," + 
+			"FROM aman_detail WHERE ..."
+
+
+
+		case "ReferenceNo" :	value = value;
+		break;
+		case "RecvControlNo" :	value = value;
+		break;
+		case "ProcessIndicator" :	value = value;
+		break;
+		case "MessageFunction" :	value = value;
+		break;
+		case "UserId" :	value = value;
+		break;
+		case "LoadingLocationID" :	value = value;
+		break;
+		case "DischargeLocationID" :	value = value;
+		break;
+		case "DeliveryLocationID" :	value = value;
+		break;
+		case "MasterBLNo" :	value = value;
+		break;
+		case "HouseNo" :	value = value;
+		break;
+		case "NumberOfPackages" :	value = value;
+		break;
+		case "UnitOfPackages" :	value = value;
+		break;
+		case "Measure" :	value = value;
+		break;
+		case "MeasureUnitCode" :	value = value;
+		break;
+		case "LastEntry" :	value = value;
+		break;
+		case "TransportEquipmentID" :	value = value;
+		break;
+
+

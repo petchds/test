@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SingleConnectionDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/accscmstest?cacheServerConfiguration=true" />
+		<property name="username" value="cmsadmin" />
+		<property name="password" value="cmsadmin" />
+
+
+	</bean>
+	
+	<bean id="failedDataSource" class="org.springframework.jdbc.datasource.SingleConnectionDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/accscmstest?cacheServerConfiguration=true" />
+		<property name="username" value="cmsadmin2" />
+		<property name="password" value="cmsadmin2" />
+	</bean>
+	
+	<import resource="classpath:com/tti/accscms/dao/dao.xml" />
+	
+	<bean id="vc" class="prog.insert.IVesselScheduleControl" />
+	<bean id="vd" class="prog.insert.IVesselScheduleDetail" />
+	<bean id="ac" class="prog.insert.IAirCargoManifestControl" />
+	<bean id="ad" class="prog.insert.IAirCargoManifestDetail"/>
+	<bean id="awc" class="prog.insert.IAirWayBillControl"> </bean>
+	<bean id="awd" class="prog.insert.IAirWayBillDetail"> </bean>
+</beans>

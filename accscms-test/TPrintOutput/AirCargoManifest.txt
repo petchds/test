@@ -1,0 +1,96 @@
+		field[0][0] = "bas:username";
+		field[1][0] = "bas:passwordDigest";
+		field[2][0] = "bas:nonce";
+		field[3][0] = "bas:created";
+		field[4][0] = "bas:offset";
+		field[5][0] = "bas:numOfResult";
+		field[6][0] = "man1:referenceNumber";
+		field[7][0] = "man1:receivedControlNumber";
+		field[8][0] = "man1:portOfLoading";
+		field[9][0] = "man1:portOfDischarge";
+		field[10][0] = "man1:processingIndicator";
+		field[11][0] = "man1:messageFunction";
+		field[12][0] = "man1:editUser";
+		field[13][0] = "man1:referenceNo";
+		field[14][0] = "man1:shipAgentCode";
+		field[15][0] = "man1:masterAirWaybillNumber";
+		field[16][0] = "man1:numberOfHouseAirWaybill";
+		field[17][0] = "man1:grossWeight";
+		field[18][0] = "man1:grossWeightUnit";
+		field[19][0] = "man1:numberOfPackage";
+		field[20][0] = "man1:packageUnit";
+		field[21][0] = "man1:lastEntry";
+
+
+"`username` varchar(45) NOT NULL ," +
+"`passworddigest` varchar(45) NOT NULL ," +
+"`nonce` varchar(45) NOT NULL ," +
+"`created` varchar(45) NOT NULL ," +
+"`offset` varchar(45) NOT NULL ," +
+"`numofresult` varchar(45) NOT NULL ," +
+"`referencenumber` varchar(45) NOT NULL ," +
+"`receivedcontrolnumber` varchar(45) NOT NULL ," +
+"`portofloading` varchar(45) NOT NULL ," +
+"`portofdischarge` varchar(45) NOT NULL ," +
+"`processingindicator` varchar(45) NOT NULL ," +
+"`messagefunction` varchar(45) NOT NULL ," +
+"`edituser` varchar(45) NOT NULL ," +
+"`referenceno` varchar(45) NOT NULL ," +
+"`shipagentcode` varchar(45) NOT NULL ," +
+"`masterairwaybillnumber` varchar(45) NOT NULL ," +
+"`numberofhouseairwaybill` varchar(45) NOT NULL ," +
+"`grossweight` varchar(45) NOT NULL ," +
+"`grossweightunit` varchar(45) NOT NULL ," +
+"`numberofpackage` varchar(45) NOT NULL ," +
+"`packageunit` varchar(45) NOT NULL ," +
+"`lastentry` varchar(45) NOT NULL ," +
+
+
+
+
+		case "username" :	value = value;
+		break;
+		case "passwordDigest" :	value = value;
+		break;
+		case "nonce" :	value = value;
+		break;
+		case "created" :	value = value;
+		break;
+		case "offset" :	value = value;
+		break;
+		case "numOfResult" :	value = value;
+		break;
+		case "referenceNumber" :	value = value;
+		break;
+		case "receivedControlNumber" :	value = value;
+		break;
+		case "portOfLoading" :	value = value;
+		break;
+		case "portOfDischarge" :	value = value;
+		break;
+		case "processingIndicator" :	value = value;
+		break;
+		case "messageFunction" :	value = value;
+		break;
+		case "editUser" :	value = value;
+		break;
+		case "referenceNo" :	value = value;
+		break;
+		case "shipAgentCode" :	value = value;
+		break;
+		case "masterAirWaybillNumber" :	value = value;
+		break;
+		case "numberOfHouseAirWaybill" :	value = value;
+		break;
+		case "grossWeight" :	value = value;
+		break;
+		case "grossWeightUnit" :	value = value;
+		break;
+		case "numberOfPackage" :	value = value;
+		break;
+		case "packageUnit" :	value = value;
+		break;
+		case "lastEntry" :	value = value;
+		break;
+
+

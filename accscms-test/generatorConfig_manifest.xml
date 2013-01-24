@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/accscmstest" userId="cmsadmin" password="cmsadmin" />
+    <javaModelGenerator targetPackage="com.tti.accscms.domain.manifest" targetProject="accscms-test/src/main/java" />
+    <sqlMapGenerator targetPackage="com.tti.accscms.mapper.manifest" targetProject="accscms-test/src/main/java" />
+    <javaClientGenerator targetPackage="com.tti.accscms.mapper.manifest" targetProject="accscms-test/src/main/java" type="XMLMAPPER" />
+    
+	<table schema="accscmstest" tableName="abil_control" domainObjectName="AirWaybillControl"></table>
+	<table schema="accscmstest" tableName="abil_control_his" domainObjectName="AirWaybillControlHistory"></table>
+	<table schema="accscmstest" tableName="abil_detail" domainObjectName="AirWaybillDetail"></table>
+	<table schema="accscmstest" tableName="abil_detail_his" domainObjectName="AirWaybillDetailHistory"></table>
+	<table schema="accscmstest" tableName="abil_dangerous_detail" domainObjectName="AirWaybillDangerousDetail"></table>
+	<table schema="accscmstest" tableName="abil_dangerous_detail_his" domainObjectName="AirWaybillDangerousDetailHistory"></table>
+	<table schema="accscmstest" tableName="aman_control" domainObjectName="AirCargoManifestControl"></table>
+	<table schema="accscmstest" tableName="aman_control_his" domainObjectName="AirCargoManifestControlHistory"></table>
+	<table schema="accscmstest" tableName="aman_detail" domainObjectName="AirCargoManifestDetail"></table>
+	<table schema="accscmstest" tableName="aman_detail_his" domainObjectName="AirCargoManifestDetailHistory"></table>
+	<table schema="accscmstest" tableName="vsed_control" domainObjectName="VesselScheduleControl"></table>
+	<table schema="accscmstest" tableName="vsed_control_his" domainObjectName="VesselScheduleControlHistory"></table>
+	<table schema="accscmstest" tableName="vsed_detail" domainObjectName="VesselScheduleDetail"></table>
+	<table schema="accscmstest" tableName="vsed_detail_his" domainObjectName="VesselScheduleDetailHistory"></table>
+	
+  </context>
+</generatorConfiguration>

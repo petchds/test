@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dir="http://accscms.tti.com/schemas/DirectImportDefinition" xmlns:bas="http://accscms.tti.com/schemas/BaseDefinition" xmlns:dir1="http://accscms.tti.com/schemas/DirectImport">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dir:SetExpressCustomsPermitRequest>
+         <bas:messageContext>
+            <bas:usernameToken>
+               <bas:username>?</bas:username>
+               <bas:passwordDigest>?</bas:passwordDigest>
+               <bas:nonce>?</bas:nonce>
+               <bas:created>?</bas:created>
+            </bas:usernameToken>
+            <!--Optional:-->
+            <bas:offset>?</bas:offset>
+            <!--Optional:-->
+            <bas:numOfResult>?</bas:numOfResult>
+         </bas:messageContext>
+         <dir:messageDetail>
+            <dir:expressCustomsPermit>
+               <dir1:transactionNo>?</dir1:transactionNo>
+               <dir1:declarationNo>?</dir1:declarationNo>
+               <dir1:documentType>?</dir1:documentType>
+               <dir1:documentStatus>?</dir1:documentStatus>
+               <dir1:receivedControlNumber>?</dir1:receivedControlNumber>
+               <dir1:callsign>?</dir1:callsign>
+               <!--Optional:-->
+               <dir1:flightNo>?</dir1:flightNo>
+               <dir1:portOfDischarge>?</dir1:portOfDischarge>
+               <!--Optional:-->
+               <dir1:shedNo>?</dir1:shedNo>
+               <!--Optional:-->
+               <dir1:vesselName>?</dir1:vesselName>
+               <dir1:masterAirWaybill>?</dir1:masterAirWaybill>
+               <dir1:houseAirWaybill>?</dir1:houseAirWaybill>
+               <dir1:flightDate>?</dir1:flightDate>
+               <!--Optional:-->
+               <dir1:consigneeName>?</dir1:consigneeName>
+               <!--Optional:-->
+               <dir1:markAndNumber>?</dir1:markAndNumber>
+               <!--Optional:-->
+               <dir1:cargoClearanceDate>?</dir1:cargoClearanceDate>
+               <!--Optional:-->
+               <dir1:cargoClearanceTime>?</dir1:cargoClearanceTime>
+               <dir1:transmitDate>?</dir1:transmitDate>
+               <dir1:transmitTime>?</dir1:transmitTime>
+               <dir1:balanced>?</dir1:balanced>
+               <dir1:balancedDate>?</dir1:balancedDate>
+               <!--Zero or more repetitions:-->
+               <dir1:listOfCustomsPermitForExpressDetail>
+                  <dir1:declarationLineNo>?</dir1:declarationLineNo>
+                  <dir1:houseAirwayBill>?</dir1:houseAirwayBill>
+               </dir1:listOfCustomsPermitForExpressDetail>
+            </dir:expressCustomsPermit>
+         </dir:messageDetail>
+      </dir:SetExpressCustomsPermitRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

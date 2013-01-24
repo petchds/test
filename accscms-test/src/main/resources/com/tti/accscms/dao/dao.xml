@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+		
+	<bean id="movementTransferTMODao" class="com.tti.accscms.mapper.movement.TransferTMODaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="clientmanagementRequestLogDao" class="com.tti.accscms.mapper.clientmanagement.RequestLogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementShipmentSearchCondition2Dao" class="com.tti.accscms.mapper.movement.ShipmentSearchCondition2DaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementCompanyProfileDao" class="com.tti.accscms.mapper.movement.CompanyProfileDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirWaybillControlDao" class="com.tti.accscms.mapper.manifest.AirWaybillControlDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementUnitDao" class="com.tti.accscms.mapper.movement.UnitDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestVesselScheduleControlHistoryDao" class="com.tti.accscms.mapper.manifest.VesselScheduleControlHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementShipmentManualDao" class="com.tti.accscms.mapper.movement.ShipmentManualDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestVesselScheduleDetailHistoryDao" class="com.tti.accscms.mapper.manifest.VesselScheduleDetailHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementGetbackExportLogDao" class="com.tti.accscms.mapper.movement.GetbackExportLogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementGoodsTransitionDao" class="com.tti.accscms.mapper.movement.GoodsTransitionDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirCargoManifestDetailDao" class="com.tti.accscms.mapper.manifest.AirCargoManifestDetailDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementBlockStatusLogDao" class="com.tti.accscms.mapper.movement.BlockStatusLogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirWaybillDetailHistoryDao" class="com.tti.accscms.mapper.manifest.AirWaybillDetailHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementExpressCustomsPermitHeaderHistoryDao" class="com.tti.accscms.mapper.movement.ExpressCustomsPermitHeaderHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementGoodsTransitionHistoryDao" class="com.tti.accscms.mapper.movement.GoodsTransitionHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementRoleDao" class="com.tti.accscms.mapper.movement.RoleDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementShipmentSearchCondition1Dao" class="com.tti.accscms.mapper.movement.ShipmentSearchCondition1DaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirCargoManifestDetailHistoryDao" class="com.tti.accscms.mapper.manifest.AirCargoManifestDetailHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementChangeAirportLogDao" class="com.tti.accscms.mapper.movement.ChangeAirportLogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementChangeAirportDao" class="com.tti.accscms.mapper.movement.ChangeAirportDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirWaybillDangerousDetailDao" class="com.tti.accscms.mapper.manifest.AirWaybillDangerousDetailDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementShipmentSearchCondition3Dao" class="com.tti.accscms.mapper.movement.ShipmentSearchCondition3DaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="clientmanagementUserCompanyDao" class="com.tti.accscms.mapper.clientmanagement.UserCompanyDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementAirportDao" class="com.tti.accscms.mapper.movement.AirportDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementGetbackExportDao" class="com.tti.accscms.mapper.movement.GetbackExportDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementUpdatedManifestStatusDao" class="com.tti.accscms.mapper.movement.UpdatedManifestStatusDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestVesselScheduleControlDao" class="com.tti.accscms.mapper.manifest.VesselScheduleControlDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementAutoBlockProfileDao" class="com.tti.accscms.mapper.movement.AutoBlockProfileDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementAutoBlockProfileConditionDao" class="com.tti.accscms.mapper.movement.AutoBlockProfileConditionDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementChangeFlightDao" class="com.tti.accscms.mapper.movement.ChangeFlightDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementChangeAirportExportDao" class="com.tti.accscms.mapper.movement.ChangeAirportExportDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirWaybillControlHistoryDao" class="com.tti.accscms.mapper.manifest.AirWaybillControlHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementReleaseLogDao" class="com.tti.accscms.mapper.movement.ReleaseLogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementShipmentMovementStatusDao" class="com.tti.accscms.mapper.movement.ShipmentMovementStatusDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementShipmentMovementStatusHistoryDao" class="com.tti.accscms.mapper.movement.ShipmentMovementStatusHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementRMSDao" class="com.tti.accscms.mapper.movement.RMSDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementDischargeLogDao" class="com.tti.accscms.mapper.movement.DischargeLogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestVesselScheduleDetailDao" class="com.tti.accscms.mapper.manifest.VesselScheduleDetailDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementLogDao" class="com.tti.accscms.mapper.movement.LogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirCargoManifestControlHistoryDao" class="com.tti.accscms.mapper.manifest.AirCargoManifestControlHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirWaybillDangerousDetailHistoryDao" class="com.tti.accscms.mapper.manifest.AirWaybillDangerousDetailHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementExpressCustomsPermitDetailHistoryDao" class="com.tti.accscms.mapper.movement.ExpressCustomsPermitDetailHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementMasterStatusDao" class="com.tti.accscms.mapper.movement.MasterStatusDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementTransferTMOLogDao" class="com.tti.accscms.mapper.movement.TransferTMOLogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementBlockStatusDao" class="com.tti.accscms.mapper.movement.BlockStatusDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="clientmanagementShedNoDao" class="com.tti.accscms.mapper.clientmanagement.ShedNoDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementMessageLogDao" class="com.tti.accscms.mapper.movement.MessageLogDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementFaultyDao" class="com.tti.accscms.mapper.movement.FaultyDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementExpressCustomsPermitHeaderDao" class="com.tti.accscms.mapper.movement.ExpressCustomsPermitHeaderDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementNormalCustomsPermitDao" class="com.tti.accscms.mapper.movement.NormalCustomsPermitDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirCargoManifestControlDao" class="com.tti.accscms.mapper.manifest.AirCargoManifestControlDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementExpressCustomsPermitDetailDao" class="com.tti.accscms.mapper.movement.ExpressCustomsPermitDetailDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementLogWSDao" class="com.tti.accscms.mapper.movement.LogWSDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementUserDao" class="com.tti.accscms.mapper.movement.UserDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="manifestAirWaybillDetailDao" class="com.tti.accscms.mapper.manifest.AirWaybillDetailDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="movementNormalCustomsPermitHistoryDao" class="com.tti.accscms.mapper.movement.NormalCustomsPermitHistoryDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+</beans>

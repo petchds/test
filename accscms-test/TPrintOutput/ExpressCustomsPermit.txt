@@ -1,0 +1,136 @@
+		field[0][0] = "bas:username";
+		field[1][0] = "bas:passwordDigest";
+		field[2][0] = "bas:nonce";
+		field[3][0] = "bas:created";
+		field[4][0] = "bas:offset";
+		field[5][0] = "bas:numOfResult";
+		field[6][0] = "dir1:transactionNo";
+		field[7][0] = "dir1:declarationNo";
+		field[8][0] = "dir1:documentType";
+		field[9][0] = "dir1:documentStatus";
+		field[10][0] = "dir1:receivedControlNumber";
+		field[11][0] = "dir1:callsign";
+		field[12][0] = "dir1:flightNo";
+		field[13][0] = "dir1:portOfDischarge";
+		field[14][0] = "dir1:shedNo";
+		field[15][0] = "dir1:vesselName";
+		field[16][0] = "dir1:masterAirWaybill";
+		field[17][0] = "dir1:houseAirWaybill";
+		field[18][0] = "dir1:flightDate";
+		field[19][0] = "dir1:consigneeName";
+		field[20][0] = "dir1:markAndNumber";
+		field[21][0] = "dir1:cargoClearanceDate";
+		field[22][0] = "dir1:cargoClearanceTime";
+		field[23][0] = "dir1:transmitDate";
+		field[24][0] = "dir1:transmitTime";
+		field[25][0] = "dir1:balanced";
+		field[26][0] = "dir1:balancedDate";
+		field[27][0] = "dir1:declarationLineNo";
+		field[28][0] = "dir1:houseAirwayBill";
+
+
+		String sqlCommand1 = "SELECT "+
+			" id ," + 
+			" transaction_no ," + 
+			" declaration_no ," + 
+			" document_type ," + 
+			" document_status ," + 
+			" received_control_number ," + 
+			" callsign ," + 
+			" flight_no ," + 
+			" port_of_discharge ," + 
+			" shed_no ," + 
+			" vessel_name ," + 
+			" mawb ," + 
+			" hawb ," + 
+			" flight_date ," + 
+			" consignee_name ," + 
+			" mark_and_number ," + 
+			" cargo_clearance_date ," + 
+			" cargo_clearance_time ," + 
+			" total_item ," + 
+			" transmit_date ," + 
+			" transmit_time ," + 
+			" number_of_container ," + 
+			" balanced ," + 
+			" balanced_date_time ," + 
+			" modified_date_time ," + 
+			" abil_goods_description ," + 
+			" status ," + 
+			" status_by ," + 
+			" remark ," + 
+			" status_date_time ," + 
+			" is_edit_manual ," + 
+			" destination ," + 
+			"FROM exp_customs_permit_header WHERE ..."
+
+		String sqlCommand2 = "SELECT "+
+			" id ," + 
+			" permit_header_id ," + 
+			" declaration_line_no ," + 
+			" hawb ," + 
+			" modified_date_time ," + 
+			"FROM exp_customs_permit_detail WHERE ..."
+
+
+
+		case "username" :	value = value;
+		break;
+		case "passwordDigest" :	value = value;
+		break;
+		case "nonce" :	value = value;
+		break;
+		case "created" :	value = value;
+		break;
+		case "offset" :	value = value;
+		break;
+		case "numOfResult" :	value = value;
+		break;
+		case "transactionNo" :	value = value;
+		break;
+		case "declarationNo" :	value = value;
+		break;
+		case "documentType" :	value = value;
+		break;
+		case "documentStatus" :	value = value;
+		break;
+		case "receivedControlNumber" :	value = value;
+		break;
+		case "callsign" :	value = value;
+		break;
+		case "flightNo" :	value = value;
+		break;
+		case "portOfDischarge" :	value = value;
+		break;
+		case "shedNo" :	value = value;
+		break;
+		case "vesselName" :	value = value;
+		break;
+		case "masterAirWaybill" :	value = value;
+		break;
+		case "houseAirWaybill" :	value = value;
+		break;
+		case "flightDate" :	value = value;
+		break;
+		case "consigneeName" :	value = value;
+		break;
+		case "markAndNumber" :	value = value;
+		break;
+		case "cargoClearanceDate" :	value = value;
+		break;
+		case "cargoClearanceTime" :	value = value;
+		break;
+		case "transmitDate" :	value = value;
+		break;
+		case "transmitTime" :	value = value;
+		break;
+		case "balanced" :	value = value;
+		break;
+		case "balancedDate" :	value = value;
+		break;
+		case "declarationLineNo" :	value = value;
+		break;
+		case "houseAirwayBill" :	value = value;
+		break;
+
+

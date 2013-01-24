@@ -1,0 +1,29 @@
+
+	@Override
+	public List<#DOMAIN_CLASS> findAllBy#KEY_FTYPE(#KEY_FTYPE #KEY_FNAME) throws DaoException {
+		try {
+			Connection conn = DataSourceUtils.doGetConnection(dataSource);
+            PreparedStatement ps = null;
+            if (#KEY_FNAME == null || #KEY_FNAME.getId() == null) {
+            	ps = conn.prepareStatement("select #DOMAIN_ATTRS from #TABLE_NAME where #KEY_NAME=null");
+            } else {
+            	ps = conn.prepareStatement("select #DOMAIN_ATTRS from #TABLE_NAME where #KEY_NAME=?");
+            	ps.set#KEY_FT(1, #KEY_FNAME.getId());
+            }
+            
+            logger.debug("DB:FIND #TABLE_NAME[#KEY_NAME=" + (#KEY_FNAME != null ? #KEY_FNAME.getId() : "null") + "]");
+            
+            ResultSet rs = ps.executeQuery();
+
+            List<#DOMAIN_CLASS> list = new ArrayList<#DOMAIN_CLASS>();
+            while (rs.next()) {
+                list.add(#DOMAIN_CLASSDaoImpl.createInstanceFromResultSet(rs));
+            }
+            rs.close();
+            ps.close();
+
+            return list;
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+	}

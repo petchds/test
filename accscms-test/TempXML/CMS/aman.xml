@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://accscms.tti.com/schemas/ManifestDefinition" xmlns:bas="http://accscms.tti.com/schemas/BaseDefinition" xmlns:man1="http://accscms.tti.com/schemas/Manifest">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <man:SetAirCargoManifestRequest>
+         <bas:messageContext>
+            <bas:usernameToken>
+               <bas:username>?</bas:username>
+               <bas:passwordDigest>?</bas:passwordDigest>
+               <bas:nonce>?</bas:nonce>
+               <bas:created>?</bas:created>
+            </bas:usernameToken>
+            <!--Optional:-->
+            <bas:offset>?</bas:offset>
+            <!--Optional:-->
+            <bas:numOfResult>?</bas:numOfResult>
+         </bas:messageContext>
+         <man:messageDetail>
+            <man:airCargoManifest>
+               <man1:airCargoManifestControl>
+                  <man1:referenceNumber>?</man1:referenceNumber>
+                  <man1:receivedControlNumber>?</man1:receivedControlNumber>
+                  <man1:portOfLoading>?</man1:portOfLoading>
+                  <man1:portOfDischarge>?</man1:portOfDischarge>
+                  <man1:processingIndicator>?</man1:processingIndicator>
+                  <man1:messageFunction>?</man1:messageFunction>
+                  <man1:editUser>?</man1:editUser>
+               </man1:airCargoManifestControl>
+               <!--1 to 99999 repetitions:-->
+               <man1:airCargoManifestDetail>
+                  <man1:referenceNo>?</man1:referenceNo>
+                  <man1:shipAgentCode>?</man1:shipAgentCode>
+                  <man1:masterAirWaybillNumber>?</man1:masterAirWaybillNumber>
+                  <man1:numberOfHouseAirWaybill>?</man1:numberOfHouseAirWaybill>
+                  <man1:grossWeight>?</man1:grossWeight>
+                  <man1:grossWeightUnit>?</man1:grossWeightUnit>
+                  <man1:numberOfPackage>?</man1:numberOfPackage>
+                  <man1:packageUnit>?</man1:packageUnit>
+                  <man1:lastEntry>?</man1:lastEntry>
+               </man1:airCargoManifestDetail>
+            </man:airCargoManifest>
+         </man:messageDetail>
+      </man:SetAirCargoManifestRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

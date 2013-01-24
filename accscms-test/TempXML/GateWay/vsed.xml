@@ -1,0 +1,61 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ves="http://ebxml.customs.go.th/schema/Vessel_7_00" xmlns:xd="http://www.w3.org/2000/09/xmldsig#">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<ves:VesselSchedule>
+			<DocumentHeader>
+				<DocumentReference>
+					<DocumentNumber>?</DocumentNumber>
+					<Receivedcontrolnumber>?</Receivedcontrolnumber>
+					<DocumentType>?</DocumentType>
+					<UserId>?</UserId>
+				</DocumentReference>
+				<ConsignmentInformation>
+					<CarrierParty>
+						<CarrierID>?</CarrierID>
+					</CarrierParty>
+					<ConsignmentTransportDetails>
+						<TransportMeans>
+							<TransportMeansCode>?</TransportMeansCode>
+							<TransportMeansJourneyID>?</TransportMeansJourneyID>
+							<TransportMeansIdentificationText>?</TransportMeansIdentificationText>
+							<Nationality>?</Nationality>
+						</TransportMeans>
+						<TransportMode>
+							<TransportModeCode>?</TransportModeCode>
+							<MasterName>?</MasterName>
+						</TransportMode>
+						<TransportPre-carriage>
+							<PreviousFlightNo>?</PreviousFlightNo>
+							<PreviousDate>?</PreviousDate>
+						</TransportPre-carriage>
+
+
+					</ConsignmentTransportDetails>
+				</ConsignmentInformation>
+			</DocumentHeader>
+			<DocumentDetailsTransport>
+				<PortOfDischarge>
+					<DischargeLocationID>?</DischargeLocationID>
+					<BerthDate>?</BerthDate>
+
+				</PortOfDischarge>
+				<TransportEquipment>
+					<TransportEquipmentID>?</TransportEquipmentID>
+					<ExpectedDateAndTime>?</ExpectedDateAndTime>
+				</TransportEquipment>
+				<PortOfCall>
+					<LastCallLocationID>?</LastCallLocationID>
+				</PortOfCall>
+
+				<GoodsItemMeasurements>
+					<GrossWeight>
+						<Measure>?</Measure>
+						<MeasureUnitCode>?</MeasureUnitCode>
+					</GrossWeight>
+				</GoodsItemMeasurements>
+				<MessageFunction>?</MessageFunction>
+				<LastEntry>?</LastEntry>
+			</DocumentDetailsTransport>
+		</ves:VesselSchedule>
+	</soapenv:Body>
+</soapenv:Envelope>

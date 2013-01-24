@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/accscmstest" userId="cmsadmin" password="cmsadmin" />
+    <javaModelGenerator targetPackage="com.tti.accscms.domain.movement" targetProject="accscms-test/src/main/java" />
+    <sqlMapGenerator targetPackage="com.tti.accscms.mapper.movement" targetProject="accscms-test/src/main/java" />
+    <javaClientGenerator targetPackage="com.tti.accscms.mapper.movement" targetProject="accscms-test/src/main/java" type="XMLMAPPER" />
+	
+	<table schema="accscmstest" tableName="log" domainObjectName="Log"></table>
+	<table schema="accscmstest" tableName="role" domainObjectName="Role"></table>
+	<table schema="accscmstest" tableName="unit" domainObjectName="Unit"></table>
+	<table schema="accscmstest" tableName="user" domainObjectName="User"></table>
+	<table schema="accscmstest" tableName="rms" domainObjectName="RMS"></table>
+	<table schema="accscmstest" tableName="company_profile" domainObjectName="CompanyProfile"></table>
+	<table schema="accscmstest" tableName="message_log" domainObjectName="MessageLog"></table>
+	<table schema="accscmstest" tableName="airport" domainObjectName="Airport"></table>
+    <table schema="accscmstest" tableName="change_airport" domainObjectName="ChangeAirport"></table>
+    <table schema="accscmstest" tableName="change_airport_export" domainObjectName="ChangeAirportExport"></table>
+    <table schema="accscmstest" tableName="change_airport_log" domainObjectName="ChangeAirportLog"></table>
+    <table schema="accscmstest" tableName="change_airport_log" domainObjectName="ChangeAirportLog"></table>
+    <table schema="accscmstest" tableName="change_flight" domainObjectName="ChangeFlight"></table>
+    <table schema="accscmstest" tableName="mas_status" domainObjectName="MasterStatus"></table>
+    <table schema="accscmstest" tableName="auto_block_profile" domainObjectName="AutoBlockProfile"></table>
+	<table schema="accscmstest" tableName="auto_block_profile_condition" domainObjectName="AutoBlockProfileCondition"></table>
+	<table schema="accscmstest" tableName="block_status" domainObjectName="BlockStatus"></table>
+	<table schema="accscmstest" tableName="block_status_log" domainObjectName="BlockStatusLog"></table>
+	<table schema="accscmstest" tableName="discharge_log" domainObjectName="DischargeLog"></table>
+	<table schema="accscmstest" tableName="di_updated_manifest_status" domainObjectName="UpdatedManifestStatus"></table>
+	<table schema="accscmstest" tableName="exp_customs_permit_detail" domainObjectName="ExpressCustomsPermitDetail"></table>
+	<table schema="accscmstest" tableName="exp_customs_permit_header" domainObjectName="ExpressCustomsPermitHeader"></table>
+	<table schema="accscmstest" tableName="exp_customs_permit_detail_his" domainObjectName="ExpressCustomsPermitDetailHistory"></table>
+	<table schema="accscmstest" tableName="exp_customs_permit_header_his" domainObjectName="ExpressCustomsPermitHeaderHistory"></table>
+	<table schema="accscmstest" tableName="faulty" domainObjectName="Faulty"></table>
+	<table schema="accscmstest" tableName="getback_export" domainObjectName="GetbackExport"></table>
+	<table schema="accscmstest" tableName="getback_export_log" domainObjectName="GetbackExportLog"></table>
+	<table schema="accscmstest" tableName="goods_transition" domainObjectName="GoodsTransition"></table>
+	<table schema="accscmstest" tableName="goods_transition_his" domainObjectName="GoodsTransitionHistory"></table>
+	<table schema="accscmstest" tableName="norm_customs_permit" domainObjectName="NormalCustomsPermit"></table>
+	<table schema="accscmstest" tableName="norm_customs_permit_his" domainObjectName="NormalCustomsPermitHistory"></table>
+	<table schema="accscmstest" tableName="release_log" domainObjectName="ReleaseLog"></table>
+	<table schema="accscmstest" tableName="shp_manual" domainObjectName="ShipmentManual"></table>
+	<table schema="accscmstest" tableName="shp_movement_status" domainObjectName="ShipmentMovementStatus"></table>
+	<table schema="accscmstest" tableName="shp_movement_status_his" domainObjectName="ShipmentMovementStatusHistory"></table>
+	<table schema="accscmstest" tableName="transfer_tmo" domainObjectName="TransferTMO"></table>
+	<table schema="accscmstest" tableName="transfer_tmo_log" domainObjectName="TransferTMOLog"></table>
+	<table schema="accscmstest" tableName="log_ws" domainObjectName="LogWS"></table>
+	
+	<table schema="accscms" tableName="shipment_search_condition_1" domainObjectName="ShipmentSearchCondition1"></table>
+	<table schema="accscms" tableName="shipment_search_condition_2" domainObjectName="ShipmentSearchCondition2"></table>
+	<table schema="accscms" tableName="shipment_search_condition_3" domainObjectName="ShipmentSearchCondition3"></table>
+  </context>
+</generatorConfiguration>

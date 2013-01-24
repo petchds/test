@@ -1,0 +1,136 @@
+		field[0][0] = "bas:username";
+		field[1][0] = "bas:passwordDigest";
+		field[2][0] = "bas:nonce";
+		field[3][0] = "bas:created";
+		field[4][0] = "bas:offset";
+		field[5][0] = "bas:numOfResult";
+		field[6][0] = "dir1:transactionNo";
+		field[7][0] = "dir1:declarationNo";
+		field[8][0] = "dir1:documentType";
+		field[9][0] = "dir1:receivedControlNumber";
+		field[10][0] = "dir1:vesselName";
+		field[11][0] = "dir1:masterAirWaybill";
+		field[12][0] = "dir1:houseAirWaybill";
+		field[13][0] = "dir1:callsign";
+		field[14][0] = "dir1:flightNo";
+		field[15][0] = "dir1:portOfDischarge";
+		field[16][0] = "dir1:shedNo";
+		field[17][0] = "dir1:flightDate";
+		field[18][0] = "dir1:consigneeName";
+		field[19][0] = "dir1:markAndNumber";
+		field[20][0] = "dir1:numberOfPackage";
+		field[21][0] = "dir1:numberOfPackageUnit";
+		field[22][0] = "dir1:grossWeight";
+		field[23][0] = "dir1:grossWeightUnit";
+		field[24][0] = "dir1:cargoClearanceDate";
+		field[25][0] = "dir1:cargoClearanceTime";
+		field[26][0] = "dir1:transmitDate";
+		field[27][0] = "dir1:transmitTime";
+		field[28][0] = "dir1:numberOfContainer";
+		field[29][0] = "dir1:balanced";
+		field[30][0] = "dir1:balancedDate";
+
+
+		String sqlCommand1 = "SELECT "+
+			" id ," + 
+			" declaration_no ," + 
+			" transaction_no ," + 
+			" document_type ," + 
+			" received_control_number ," + 
+			" vessel_name ," + 
+			" mawb ," + 
+			" hawb ," + 
+			" callsign ," + 
+			" flight_no ," + 
+			" port_of_discharge ," + 
+			" shed_no ," + 
+			" flight_date ," + 
+			" consignee_name ," + 
+			" mark_and_number ," + 
+			" number_of_package ," + 
+			" number_of_package_unit ," + 
+			" gross_weight ," + 
+			" gross_weight_unit ," + 
+			" cargo_clearance_date ," + 
+			" cargo_clearance_time ," + 
+			" transmit_date ," + 
+			" transmit_time ," + 
+			" number_of_container ," + 
+			" balanced ," + 
+			" balanced_date_time ," + 
+			" modified_date_time ," + 
+			" abil_goods_description ," + 
+			" status ," + 
+			" status_by ," + 
+			" status_date_time ," + 
+			" remark ," + 
+			" is_edit_manual ," + 
+			" destination ," + 
+			"FROM norm_customs_permit WHERE ..."
+
+
+
+		case "username" :	value = value;
+		break;
+		case "passwordDigest" :	value = value;
+		break;
+		case "nonce" :	value = value;
+		break;
+		case "created" :	value = value;
+		break;
+		case "offset" :	value = value;
+		break;
+		case "numOfResult" :	value = value;
+		break;
+		case "transactionNo" :	value = value;
+		break;
+		case "declarationNo" :	value = value;
+		break;
+		case "documentType" :	value = value;
+		break;
+		case "receivedControlNumber" :	value = value;
+		break;
+		case "vesselName" :	value = value;
+		break;
+		case "masterAirWaybill" :	value = value;
+		break;
+		case "houseAirWaybill" :	value = value;
+		break;
+		case "callsign" :	value = value;
+		break;
+		case "flightNo" :	value = value;
+		break;
+		case "portOfDischarge" :	value = value;
+		break;
+		case "shedNo" :	value = value;
+		break;
+		case "flightDate" :	value = value;
+		break;
+		case "consigneeName" :	value = value;
+		break;
+		case "markAndNumber" :	value = value;
+		break;
+		case "numberOfPackage" :	value = value;
+		break;
+		case "numberOfPackageUnit" :	value = value;
+		break;
+		case "grossWeight" :	value = value;
+		break;
+		case "grossWeightUnit" :	value = value;
+		break;
+		case "cargoClearanceDate" :	value = value;
+		break;
+		case "cargoClearanceTime" :	value = value;
+		break;
+		case "transmitDate" :	value = value;
+		break;
+		case "transmitTime" :	value = value;
+		break;
+		case "numberOfContainer" :	value = value;
+		break;
+		case "balanced" :	value = value;
+		break;
+		case "balancedDate" :	value = value;
+		break;
+
+

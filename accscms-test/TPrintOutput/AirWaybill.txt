@@ -1,0 +1,286 @@
+		field[0][0] = "bas:username";
+		field[1][0] = "bas:passwordDigest";
+		field[2][0] = "bas:nonce";
+		field[3][0] = "bas:created";
+		field[4][0] = "bas:offset";
+		field[5][0] = "bas:numOfResult";
+		field[6][0] = "man1:referenceNumber";
+		field[7][0] = "man1:receivedControlNumber";
+		field[8][0] = "man1:freightForwarderTaxNumber";
+		field[9][0] = "man1:freightForwarderBranch";
+		field[10][0] = "man1:processingIndicator";
+		field[11][0] = "man1:masterAirWaybill";
+		field[12][0] = "man1:isoOriginCountryCode";
+		field[13][0] = "man1:portOfLoading";
+		field[14][0] = "man1:portOfDischarge";
+		field[15][0] = "man1:placeOfDelivery";
+		field[16][0] = "man1:shedNumber";
+		field[17][0] = "man1:messageFunction";
+		field[18][0] = "man1:editUserID";
+		field[19][0] = "man1:referenceNo";
+		field[20][0] = "man1:houseAirWaybill";
+		field[21][0] = "man1:streetAndNumber";
+		field[22][0] = "man1:district";
+		field[23][0] = "man1:subProvince";
+		field[24][0] = "man1:province";
+		field[25][0] = "man1:postcode";
+		field[26][0] = "man1:phoneNumber";
+		field[27][0] = "man1:isoCountryCode";
+		field[28][0] = "man1:consignorName";
+		field[29][0] = "man1:consigneeOrNotifyParty";
+		field[30][0] = "man1:streetAndNumber";
+		field[31][0] = "man1:district";
+		field[32][0] = "man1:subProvince";
+		field[33][0] = "man1:province";
+		field[34][0] = "man1:postcode";
+		field[35][0] = "man1:phoneNumber";
+		field[36][0] = "man1:isoCountryCode";
+		field[37][0] = "man1:consigneeName";
+		field[38][0] = "man1:streetAndNumber";
+		field[39][0] = "man1:district";
+		field[40][0] = "man1:subProvince";
+		field[41][0] = "man1:province";
+		field[42][0] = "man1:postcode";
+		field[43][0] = "man1:phoneNumber";
+		field[44][0] = "man1:isoCountryCode";
+		field[45][0] = "man1:notifyPartyName";
+		field[46][0] = "man1:grossWeight";
+		field[47][0] = "man1:grossWeightUnit";
+		field[48][0] = "man1:numberOfPackage";
+		field[49][0] = "man1:packageUnit";
+		field[50][0] = "man1:fobValue";
+		field[51][0] = "man1:fobCurrencyCode";
+		field[52][0] = "man1:freightValue";
+		field[53][0] = "man1:freightCurrencyCode";
+		field[54][0] = "man1:insuranceValue";
+		field[55][0] = "man1:insuranceCurrencyCode";
+		field[56][0] = "man1:dangerousGoods";
+		field[57][0] = "man1:markAndLabels";
+		field[58][0] = "man1:descriptionOfGoods";
+		field[59][0] = "man1:declarationNo";
+		field[60][0] = "man1:lastEntry";
+		field[61][0] = "man1:balanced";
+		field[62][0] = "man1:balancedDate";
+
+
+		String sqlCommand1 = "SELECT "+
+			" id ," + 
+			" reference_number ," + 
+			" received_control_number ," + 
+			" mawb ," + 
+			" freight_forwarder_tax_number ," + 
+			" freight_forwarder_branch ," + 
+			" processing_indicator ," + 
+			" origin_country_code ," + 
+			" port_of_loading ," + 
+			" port_of_discharge ," + 
+			" place_of_receipt ," + 
+			" place_of_delivery ," + 
+			" shed_no ," + 
+			" message_function ," + 
+			" freight_charges ," + 
+			" other_charges ," + 
+			" freight_amount_foreign ," + 
+			" freight_currency_code ," + 
+			" term_of_payment_freight ," + 
+			" registration_id ," + 
+			" modified_date_time ," + 
+			" type ," + 
+			"FROM abil_control WHERE ..."
+
+		String sqlCommand2 = "SELECT "+
+			" id ," + 
+			" abil_control_id ," + 
+			" hawb ," + 
+			" received_control_number ," + 
+			" mawb ," + 
+			" flight_no ," + 
+			" flight_date ," + 
+			" e_freight_code ," + 
+			" consignor_name ," + 
+			" consignor_street_and_number ," + 
+			" consignor_district ," + 
+			" consignor_sub_province ," + 
+			" consignor_province ," + 
+			" consignor_postcode ," + 
+			" consignor_phone_number ," + 
+			" consignor_country_code ," + 
+			" consignee_or_notify_party ," + 
+			" consignee_name ," + 
+			" consignee_street_and_number ," + 
+			" consignee_district ," + 
+			" consignee_sub_province ," + 
+			" consignee_province ," + 
+			" consignee_postcode ," + 
+			" consignee_phone_number ," + 
+			" consignee_country_code ," + 
+			" notify_party_name ," + 
+			" notify_party_street_and_number ," + 
+			" notify_party_district ," + 
+			" notify_party_sub_province ," + 
+			" notify_party_province ," + 
+			" notify_party_postcode ," + 
+			" notify_party_phone_number ," + 
+			" notify_party_country_code ," + 
+			" transshipment_applicant_tax_number ," + 
+			" transshipment_applicant_branch ," + 
+			" transshipment_applicant_english_name ," + 
+			" transshipment_applicant_street_and_number ," + 
+			" transshipment_applicant_district ," + 
+			" transshipment_applicant_sub_province ," + 
+			" transshipment_applicant_province ," + 
+			" transshipment_applicant_postcode ," + 
+			" transshipment_applicant_phone_number ," + 
+			" transshipment_applicant_country_code ," + 
+			" total_gross_weight ," + 
+			" total_gross_weight_unit ," + 
+			" total_number_of_package ," + 
+			" total_number_of_package_unit ," + 
+			" fob_value_foreign ," + 
+			" fob_currency_code ," + 
+			" freight_amount_foreign ," + 
+			" freight_currency_code ," + 
+			" insurance_amount_foreign ," + 
+			" insurance_currency_code ," + 
+			" mark_and_labels ," + 
+			" goods_description ," + 
+			" declaration_no ," + 
+			" last_entry ," + 
+			" balanced ," + 
+			" balanced_date_time ," + 
+			" modified_date_time ," + 
+			" shed_no ," + 
+			" type ," + 
+			" close_flight ," + 
+			"FROM abil_detail WHERE ..."
+
+
+
+		case "username" :	value = value;
+		break;
+		case "passwordDigest" :	value = value;
+		break;
+		case "nonce" :	value = value;
+		break;
+		case "created" :	value = value;
+		break;
+		case "offset" :	value = value;
+		break;
+		case "numOfResult" :	value = value;
+		break;
+		case "referenceNumber" :	value = value;
+		break;
+		case "receivedControlNumber" :	value = value;
+		break;
+		case "freightForwarderTaxNumber" :	value = value;
+		break;
+		case "freightForwarderBranch" :	value = value;
+		break;
+		case "processingIndicator" :	value = value;
+		break;
+		case "masterAirWaybill" :	value = value;
+		break;
+		case "isoOriginCountryCode" :	value = value;
+		break;
+		case "portOfLoading" :	value = value;
+		break;
+		case "portOfDischarge" :	value = value;
+		break;
+		case "placeOfDelivery" :	value = value;
+		break;
+		case "shedNumber" :	value = value;
+		break;
+		case "messageFunction" :	value = value;
+		break;
+		case "editUserID" :	value = value;
+		break;
+		case "referenceNo" :	value = value;
+		break;
+		case "houseAirWaybill" :	value = value;
+		break;
+		case "streetAndNumber" :	value = value;
+		break;
+		case "district" :	value = value;
+		break;
+		case "subProvince" :	value = value;
+		break;
+		case "province" :	value = value;
+		break;
+		case "postcode" :	value = value;
+		break;
+		case "phoneNumber" :	value = value;
+		break;
+		case "isoCountryCode" :	value = value;
+		break;
+		case "consignorName" :	value = value;
+		break;
+		case "consigneeOrNotifyParty" :	value = value;
+		break;
+		case "streetAndNumber" :	value = value;
+		break;
+		case "district" :	value = value;
+		break;
+		case "subProvince" :	value = value;
+		break;
+		case "province" :	value = value;
+		break;
+		case "postcode" :	value = value;
+		break;
+		case "phoneNumber" :	value = value;
+		break;
+		case "isoCountryCode" :	value = value;
+		break;
+		case "consigneeName" :	value = value;
+		break;
+		case "streetAndNumber" :	value = value;
+		break;
+		case "district" :	value = value;
+		break;
+		case "subProvince" :	value = value;
+		break;
+		case "province" :	value = value;
+		break;
+		case "postcode" :	value = value;
+		break;
+		case "phoneNumber" :	value = value;
+		break;
+		case "isoCountryCode" :	value = value;
+		break;
+		case "notifyPartyName" :	value = value;
+		break;
+		case "grossWeight" :	value = value;
+		break;
+		case "grossWeightUnit" :	value = value;
+		break;
+		case "numberOfPackage" :	value = value;
+		break;
+		case "packageUnit" :	value = value;
+		break;
+		case "fobValue" :	value = value;
+		break;
+		case "fobCurrencyCode" :	value = value;
+		break;
+		case "freightValue" :	value = value;
+		break;
+		case "freightCurrencyCode" :	value = value;
+		break;
+		case "insuranceValue" :	value = value;
+		break;
+		case "insuranceCurrencyCode" :	value = value;
+		break;
+		case "dangerousGoods" :	value = value;
+		break;
+		case "markAndLabels" :	value = value;
+		break;
+		case "descriptionOfGoods" :	value = value;
+		break;
+		case "declarationNo" :	value = value;
+		break;
+		case "lastEntry" :	value = value;
+		break;
+		case "balanced" :	value = value;
+		break;
+		case "balancedDate" :	value = value;
+		break;
+
+

@@ -1,0 +1,154 @@
+	
+	private static String buildClause(#DOMAIN_CLASSExample #L_DOMAIN_CLASSExample) {
+		StringBuilder builder = new StringBuilder();
+		boolean firstO = true;
+		for (#DOMAIN_CLASSExample.Criteria criteria : #L_DOMAIN_CLASSExample.getOredCriteria()) {
+			if (firstO) {
+				firstO = false;
+			} else {
+				builder.append(" or ");
+			}
+			
+			if (criteria.isValid()) {
+				builder.append('(');
+				boolean first = true;
+				for (#DOMAIN_CLASSExample.Criterion criterion : criteria.getAllCriteria()) {
+					if (first) {
+						first = false;
+					} else {
+						builder.append(" and ");
+					}
+					
+					if (criterion.isNoValue()) {
+						builder.append(criterion.getCondition());
+					} else if (criterion.isSingleValue()) {
+						builder.append(criterion.getCondition());
+						builder.append(' ');
+						builder.append("'");
+						if (criterion.getValue() instanceof java.util.Date) {
+							builder.append(dateFormat.format(criterion.getValue()));
+						} else {
+							builder.append(criterion.getValue().toString().replace("'", "\\\'"));
+						}
+						builder.append("'");
+					} else if (criterion.isBetweenValue()) {
+						builder.append(criterion.getCondition());
+						builder.append(' ');
+						
+						builder.append("'");
+						if (criterion.getValue() instanceof java.util.Date) {
+							builder.append(dateFormat.format(criterion.getValue()));
+						} else {
+							builder.append(criterion.getValue().toString().replace("'", "\\\'"));
+						}
+						builder.append("'");
+						
+						builder.append(" and ");
+						builder.append("'");
+						if (criterion.getSecondValue() instanceof java.util.Date) {
+							builder.append(dateFormat.format(criterion.getSecondValue()));
+						} else {
+							builder.append(criterion.getSecondValue().toString().replace("'", "\\\'"));
+						}
+						builder.append("'");
+					} else if (criterion.isListValue()) {
+						builder.append(criterion.getCondition());
+						builder.append('(');
+						List<?> items = (List<?>) criterion.getValue();
+						boolean firstC = true;
+						for (Object item : items) {
+							if (firstC) {
+								firstC = false;
+							} else {
+								builder.append(", ");
+							}
+							builder.append("'");
+							if (item instanceof java.util.Date) {
+								builder.append(dateFormat.format(item));
+							} else {
+								builder.append(item.toString().replace("'", "\\\'"));
+							}
+							builder.append("'");
+						}
+						builder.append(')');
+					}
+				}
+				builder.append(')');
+			}
+		}
+		
+		String clause = firstO ? "" : " where " + builder.toString();
+		
+		if (#L_DOMAIN_CLASSExample.getOrderByClause() != null && !#L_DOMAIN_CLASSExample.getOrderByClause().isEmpty()) {
+			clause += " order by " + #L_DOMAIN_CLASSExample.getOrderByClause();
+		}
+		
+		return clause;
+	}
+	
+	@Override
+	public #COUNT_TYPE countBy#DOMAIN_CLASSExample(#DOMAIN_CLASSExample #L_DOMAIN_CLASSExample) throws DaoException {
+		try {
+			Connection conn = DataSourceUtils.doGetConnection(dataSource);
+            Statement stmt = conn.createStatement();
+
+			String clause = #DOMAIN_CLASSDaoImpl.buildClause(#L_DOMAIN_CLASSExample);			
+            ResultSet rs = stmt.executeQuery("select" + (#L_DOMAIN_CLASSExample.isDistinct() ? " distinct " : " ") + "count(*) from #TABLE_NAME" + clause);
+            #COUNT_TYPE count = -1;
+            if (rs.next()) {
+            	count = rs.get#U_COUNT_TYPE(1);
+           	}
+            rs.close();
+            stmt.close();
+            
+            logger.debug("DB:COUNT #TABLE_NAME[distinct=" + #L_DOMAIN_CLASSExample.isDistinct() + ",clause=" + clause + "] => " + count);
+
+            return count;
+        } catch (Exception e) {
+            throw new DaoException(e);
+        }
+	}
+	
+	@Override
+	public #DOMAIN_CLASS findBy#DOMAIN_CLASSExample(#DOMAIN_CLASSExample #L_DOMAIN_CLASSExample) throws DaoException {
+		List<#DOMAIN_CLASS> res = this.findAllBy#DOMAIN_CLASSExample(#L_DOMAIN_CLASSExample, 0, 1);
+		if (res.size() > 0) {
+			return res.get(0);
+		} else {
+			return null;
+		}
+	}
+	
+	@Override
+    public List<#DOMAIN_CLASS> findAllBy#DOMAIN_CLASSExample(#DOMAIN_CLASSExample #L_DOMAIN_CLASSExample) throws DaoException {
+    	return this.findAllBy#DOMAIN_CLASSExample(#L_DOMAIN_CLASSExample, 0, 2000);
+    }
+    
+    @Override
+    public List<#DOMAIN_CLASS> findAllBy#DOMAIN_CLASSExample(#DOMAIN_CLASSExample #L_DOMAIN_CLASSExample, int limit) throws DaoException {
+    	return this.findAllBy#DOMAIN_CLASSExample(#L_DOMAIN_CLASSExample, 0, limit);
+    }
+    
+    @Override
+    public List<#DOMAIN_CLASS> findAllBy#DOMAIN_CLASSExample(#DOMAIN_CLASSExample #L_DOMAIN_CLASSExample, int offset, int limit) throws DaoException {
+    	try {
+    		Connection conn = DataSourceUtils.doGetConnection(dataSource);
+            Statement stmt = conn.createStatement();
+            String clause = #DOMAIN_CLASSDaoImpl.buildClause(#L_DOMAIN_CLASSExample) + " limit " + offset + "," + limit;
+            
+            logger.debug("DB:FIND #TABLE_NAME[distinct=" + #L_DOMAIN_CLASSExample.isDistinct() + ",clause=" + clause + "]");
+            
+            ResultSet rs = stmt.executeQuery("select" + (#L_DOMAIN_CLASSExample.isDistinct() ? " distinct " : " ") + "#DOMAIN_ATTRS from #TABLE_NAME" + clause);
+
+            List<#DOMAIN_CLASS> list = new ArrayList<#DOMAIN_CLASS>();
+            while (rs.next()) {
+                list.add(#DOMAIN_CLASSDaoImpl.createInstanceFromResultSet(rs));
+            }
+            rs.close();
+            stmt.close();
+
+            return list;
+        } catch (Exception e) {
+            throw new DaoException(e);
+        }
+	}
