@@ -1,0 +1,6 @@
+<bas:usernameToken>
+	<bas:username>Golf</bas:username>
+	<bas:passwordDigest>99a8e33510f88541f9100e4b2225f3df</bas:passwordDigest>
+	<bas:nonce>abcde</bas:nonce>
+	<bas:created>2012-12-20T16:31:07Z</bas:created>
+</bas:usernameToken>
