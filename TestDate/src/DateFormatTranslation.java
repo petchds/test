@@ -23,7 +23,7 @@ public class DateFormatTranslation {
 		Calendar cal = Calendar.getInstance(new Locale("en", "EN"));
 		String myDate = "20121031";
 		cal.set(Integer.parseInt(myDate.subSequence(0, 4)+""), Integer.parseInt(myDate.subSequence(5, 6)+""), Integer.parseInt(myDate.subSequence(7, 8)+""));
-		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");//'T'HH:mm:ss");//, Locale.UK);
+		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");//, Locale.UK);
 		fmt.setCalendar(cal);
 		System.out.println(fmt.format(new Date()));
 		cal = Calendar.getInstance(new Locale("en", "TH"));
