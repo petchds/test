@@ -7,7 +7,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringReader;
-import java.io.StringWriter;
 import java.io.Writer;
 import java.util.Scanner;
 
@@ -59,24 +58,6 @@ public class CodeGeneratorControlV2 {
 			}					
 		return output.substring(9);
 	}
-	
-	public static String readFile(File inputFile){
-		StringBuffer buffer = new StringBuffer();
-		try {
-			Scanner scan = new Scanner(inputFile);
-			while(scan.hasNext()){
-				buffer.append(scan.nextLine() + "\n");
-			}
-			scan.close();
-			return buffer.toString();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		}
-		
-	}
-	
 	public static Document convertToDom(String xmlString){
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder;
@@ -125,30 +106,6 @@ public class CodeGeneratorControlV2 {
 			e.printStackTrace();
 		}
 	}
-	
-	public static String convertDomToString(Document document){
-		StringWriter writer = new StringWriter();
-		try {
-			 TransformerFactory tFactory =
-					    TransformerFactory.newInstance();
-					    Transformer transformer = 
-					    tFactory.newTransformer();
-
-					    DOMSource source = new DOMSource(document);
-					    StreamResult result = new StreamResult(writer);
-					    transformer.transform(source, result);
-					    
-					    return writer.toString();
-		} catch (TransformerConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return null;
-	}
-	
 	public static ImageIcon createImageIcon(String path) {
         java.net.URL imgURL = CodeGeneratorControl.class.getResource(path);
         if (imgURL != null) {
@@ -158,9 +115,22 @@ public class CodeGeneratorControlV2 {
             return null;
         }
 	}
-	public void refreshTree() {
+	public void ExportFile(String path, String nodeOUT, String nodeIN) {
 		// TODO Auto-generated method stub
-		
+		  try {
+			  	BufferedWriter out = new BufferedWriter(new FileWriter("file.txt"));
+	            //print text to file
+			  	out.write("Node OUT :"+nodeOUT);
+			  	out.write("Node IN :"+nodeIN);
+			  	out.write("Path :"+path);
+			  	out.close();
+	            }catch (Exception e) {
+	            JOptionPane.showMessageDialog (
+	            null,
+	            "Error in writing data!!\n\r" + e,
+	            "File Save Error",
+	            JOptionPane.ERROR_MESSAGE);
+	            
+	        }
 	}
-	
 }
