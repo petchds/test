@@ -1,5 +1,5 @@
-// hello Petch
-
+// hello Petch YeYe
+// OMG
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -116,9 +116,18 @@ public class CodeGeneratorControlV2 {
         }
 	}
 	public void ExportFile(String path, String nodeOUT, String nodeIN) {
+		String outputPath = "ExportXSLTCode" + ".txt";
+		//Check File Existing, then change name to unique file
+		File outputFile = new File(outputPath);
+		int uniqueID = 1;
+		while(outputFile.exists()){
+			outputPath = "ExportXSLTCode_" + uniqueID++ + ".txt";
+			outputFile = new File(outputPath);
+		}
+		
 		// TODO Auto-generated method stub
 		  try {
-			  	BufferedWriter out = new BufferedWriter(new FileWriter("file.txt"));
+			  	BufferedWriter out = new BufferedWriter(new FileWriter(outputFile));
 	            //print text to file
 			  	out.write("Node OUT :"+nodeOUT);
 			  	out.write("Node IN :"+nodeIN);
