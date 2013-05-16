@@ -1,5 +1,4 @@
 import java.awt.BorderLayout;
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -12,7 +11,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
-import javax.sql.rowset.spi.XmlWriter;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -30,10 +28,6 @@ import javax.swing.tree.TreePath;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import org.omg.CORBA.INITIALIZE;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -50,14 +44,11 @@ public class CodeGeneratoGUIV2 implements ActionListener {
 	
 	private JTree treeIN;
 	private JTree treeOUT;
-	private JTree treeTEMP;
 	private VSX parser;
 	public String nodeIN="";
 	public String nodeOUT="";
 
 	private String currentChooseFilePath;
-	
-	private Document currentDOM;
 
 
 	/**
@@ -163,11 +154,21 @@ public class CodeGeneratoGUIV2 implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
+		String outputPath = "ExportXSLTCode" + ".txt";
+		//Check File Existing, then change name to unique file
+		File outputFile = new File(outputPath);
+		int uniqueID = 1;
+		while(outputFile.exists()){
+			outputPath = "ExportXSLTCode_" + uniqueID++ + ".txt";
+			outputFile = new File(outputPath);
+		}
+		
 		//export
 		if (e.getActionCommand().equals("Export")) {
 			
 			try {
-			  	BufferedWriter out = new BufferedWriter(new FileWriter("C:/Users/I-Nase_01/Dropbox/P'au/file.txt"));
+//			  	BufferedWriter out = new BufferedWriter(new FileWriter("C:/Users/I-Nase_01/Dropbox/P'au/file.txt"));
+				BufferedWriter out = new BufferedWriter(new FileWriter(outputPath));
 	            //print text to file
 			  	out.write("Node OUT :"+nodeOUT);
 			  	out.newLine();
@@ -195,15 +196,12 @@ public class CodeGeneratoGUIV2 implements ActionListener {
 			fileChooser.setFileFilter(new FileNameExtensionFilter("XML File", "xml"));
 
 			fileChooser.setAcceptAllFileFilterUsed(false);
-			
 
 			int rVal = fileChooser.showOpenDialog(null);
 			if (rVal == JFileChooser.APPROVE_OPTION) {
 				logOUT.setText(fileChooser.getSelectedFile().toString());
 				currentChooseFilePath = fileChooser.getSelectedFile().toString();
 //				xpath.setText(generate.pathfinder(fileChooser.getSelectedFile().toString(), "PreviousDate"));
-				
-				
 				
 				//Update UI
 				treeOUT.setModel(parser.parse(logOUT.getText()));
@@ -212,14 +210,10 @@ public class CodeGeneratoGUIV2 implements ActionListener {
 				}
 				
 				treeOUT.updateUI();
-				String readFile = CodeGeneratorControlV2.readFile(new File(logOUT.getText()));
-				System.out.println(readFile);
 				
-				currentDOM = CodeGeneratorControlV2.convertToDom(readFile);
 				//Enable JTree and Add Listener
 				treeOUT.setEnabled(true);
-				treeOUT.addMouseListener(new MouseListener() 
-				{
+				treeOUT.addMouseListener(new MouseListener() {
 					
 					@Override
 					public void mouseReleased(MouseEvent arg0) {
@@ -248,6 +242,8 @@ public class CodeGeneratoGUIV2 implements ActionListener {
 //					         
 //					         xpath.setText(generate.pathfinder(currentChooseFilePath, "PreviousDate"));
 //					         xpath.setText(selectionPath);
+					         
+
 					}
 					
 					@Override
@@ -308,48 +304,18 @@ public class CodeGeneratoGUIV2 implements ActionListener {
 								// TODO Auto-generated method stub
 								  int selRow = treeIN.getRowForLocation(arg0.getX(), arg0.getY());
 							         TreePath selPath = treeIN.getPathForLocation(arg0.getX(), arg0.getY());
-							         nodeIN=treeIN.getLastSelectedPathComponent().toString();
-							         System.out.println("Node IN :"+nodeIN.substring(0, nodeIN.lastIndexOf(":")));
 							         if(selRow != -1) {
 							             if(arg0.getClickCount() == 1) { //Single click
 //							                 mySingleClick(selRow, selPath);
 							            	 System.out.println("Test1");
 							             }
 							             else if(arg0.getClickCount() == 2) { //Double click
+//							                 myDoubleClick(selRow, selPath);
 							            	 System.out.println("Test2");
-
-							            	 	System.out
-														.println("CurrentDOM : " + currentDOM);
-							            	 	System.out
-														.println(currentDOM.getChildNodes().item(0).getChildNodes().item(0).getNodeName());
-								            	Node node = (Node) currentDOM.getElementsByTagName(nodeIN.substring(0, nodeIN.lastIndexOf(":"))).item(0);
-								            	node.setTextContent(xpath.getText());
-								            	//
-	
-								            	 
-							            	 
-//								            	treeOUT.setModel(parser.parse(logOUT.getText()));
-//							 					for(int i = 0 ; i < treeOUT.getRowCount() ; i++){
-//							 						treeOUT.expandRow(i);
-//							 					}
-								            	treeTEMP = treeOUT;
-								            	treeTEMP.setModel(parser.parse(logOUT.getText()));
-							 					for(int i = 0 ; i < treeTEMP.getRowCount() ; i++){
-							 						treeTEMP.expandRow(i);
-							 					}
-							 			
-							 					treeOUT = treeTEMP;
-							 					treeOUT.updateUI();
-							 				
-							            	 
-							            	 
-							            	 
-							            	 
 							             }
 							         }
-							         
-							         
-//							         System.out.println("Node IN :"+nodeIN);
+							         nodeIN=treeIN.getLastSelectedPathComponent().toString();
+							         System.out.println("Node IN :"+nodeIN);
 							         String selectionPath =  treeIN.getSelectionPath().toString()
 			 								 					 .replaceAll("\\:  \\(\\)(, )?", "/")
 			 								 					 .replaceAll("\\[", "/")
@@ -494,7 +460,6 @@ public class CodeGeneratoGUIV2 implements ActionListener {
 			String a = getAttributesAsString();
 			return name + ": " + a + (data == null ? "" : " (" + data + ")");
 		}
-		
 	}
 
 }
