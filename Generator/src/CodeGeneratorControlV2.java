@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 // hello Petch YeYe
 // OMG
+=======
+// hello Petch
+
+>>>>>>> Revert "Test Conflict!!!!"
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
