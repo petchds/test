@@ -2,8 +2,10 @@ abcdefg
 
 first line to be removed, first..
 
-Second line to be remove, first..
+Second line to be removed, first..
 
-third line to be removed, Second..
+third Line to be removed, second
 
-fourth line to be remove, Second..
+fourth line to be removed, second
+
+abcd was added..
