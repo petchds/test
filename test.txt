@@ -3,7 +3,3 @@ abcdefg
 first line to be removed, first..
 
 Second line to be remove, first..
-
-third line to be removed, Second..
-
-fourth line to be remove, Second..
