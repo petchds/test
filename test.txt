@@ -7,6 +7,3 @@ Second line to be remove, first..
 third line to be removed, Second..
 
 fourth line to be remove, Second..
-
-fifth line
-sixth line
