@@ -7,3 +7,5 @@ Second line to be removed, first..
 third Line to be removed, second
 
 fourth line to be removed, second
+
+abcd was added..
