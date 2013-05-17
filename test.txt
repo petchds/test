@@ -13,3 +13,5 @@ abcd was added..
 1 comit first
 
 2 comit 
+
+3 comit remove abcd
